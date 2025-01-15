@@ -1,0 +1,11 @@
+services:
+  planning-poker:
+    build:
+      context: .
+    image: self-host-planning-poker
+    ports:
+      - 8000:8000
+    volumes:
+      - planning-poker-data:/data
+volumes:
+  planning-poker-data: {}
