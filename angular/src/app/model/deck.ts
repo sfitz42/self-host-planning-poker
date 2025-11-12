@@ -70,13 +70,9 @@ export const decks: Deck[] = [
     name: 'T_SHIRTS',
     textValues: true,
     values: [
-      { value: 1, display: 'XXS' },
-      { value: 2, display: 'XS' },
       { value: 3, display: 'S' },
       { value: 4, display: 'M' },
-      { value: 5, display: 'L' },
-      { value: 6, display: 'XL' },
-      { value: 7, display: 'XXL' },
+      { value: 5, display: 'L' }
     ]
   }
 ]
