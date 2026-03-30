@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
+* { font-family: 'Comic Sans MS', 'Chalkboard SE', cursive !important; }
+
 $primary: #198754;
 $enable-shadows: true;
 $color-mode-type: media-query;
@@ -39,6 +41,7 @@ $color-mode-type: media-query;
   align-items: center;
   justify-content: center;
   background-color: $body-bg;
+  transform: rotate(180deg);
   transition: transform 200ms ease-in-out, background-color 100ms ease-in, outline-color 100ms ease-in;
 
   @media (prefers-reduced-motion: reduce) {

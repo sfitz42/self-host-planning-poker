@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { NavigationBarComponent } from '../../navigation-bar/navigation-bar.component';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   standalone: true,
   selector: 'shpp-container',
   templateUrl: './container.component.html',
-  imports: [ NavigationBarComponent ]
+  imports: [ NavigationBarComponent, FooterComponent ]
 })
 export class ContainerComponent {
 

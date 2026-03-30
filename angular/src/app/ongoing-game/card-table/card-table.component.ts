@@ -6,13 +6,14 @@ import { CurrentGameService } from '../current-game.service';
 import { PlayerHandComponent } from './player-hand/player-hand.component';
 import { KeyValuePipe, NgFor } from '@angular/common';
 import { TranslocoDirective } from '@ngneat/transloco';
+import { ClippyComponent } from '../clippy/clippy.component';
 
 @Component({
     selector: 'shpp-card-table',
     templateUrl: './card-table.component.html',
     styleUrls: ['./card-table.component.scss'],
     standalone: true,
-    imports: [TranslocoDirective, NgFor, PlayerHandComponent, KeyValuePipe]
+    imports: [TranslocoDirective, NgFor, PlayerHandComponent, KeyValuePipe, ClippyComponent]
 })
 export class CardTableComponent implements OnDestroy {
   state: GameState = {}

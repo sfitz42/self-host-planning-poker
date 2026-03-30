@@ -5,6 +5,7 @@ import { CurrentGameService } from '../current-game.service';
 import { UserInformationService } from '../../shared/user-info/user-information.service';
 import { PickableCardComponent } from './card/pickable-card.component';
 import { NgIf, NgFor } from '@angular/common';
+import confetti from 'canvas-confetti';
 
 @Component({
     selector: 'shpp-card-picker',
@@ -53,6 +54,16 @@ export class CardPickerComponent implements OnDestroy {
     if (this.selectedCard !== card) {
       this.selectedCard = card;
       this.currentGame.pickCard(card.value);
+      const emojis = ['🃏', '🤔', '❓'];
+      const shapes = emojis.map(e => (confetti as any).shapeFromText({ text: e, scalar: 2 }));
+      confetti({
+        disableForReducedMotion: true,
+        particleCount: 60,
+        spread: 70,
+        origin: { y: 0.9 },
+        shapes,
+        scalar: 2
+      });
     } else {
       this.selectedCard = undefined;
       this.currentGame.pickCard(null);

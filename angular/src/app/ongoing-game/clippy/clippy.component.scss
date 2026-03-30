@@ -1,0 +1,37 @@
+.speech-bubble {
+  position: absolute;
+  bottom: calc(100% - 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fffde7;
+  border: 2px solid #555;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 0.75rem;
+  width: max-content;
+  max-width: 160px;
+  text-align: center;
+  color: #333;
+  z-index: 10;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: #555;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: calc(100% - 2px);
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: #fffde7;
+    z-index: 1;
+  }
+}
